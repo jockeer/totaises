@@ -1,13 +1,112 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --blanco: #ffffff;
+  --gris1: #f5ffee;
+  --gris2: #31482f;
+  --gris3: #1c2d1a;
+  --negro: #000000;
+  --headingFont:'Fjalla One', sans-serif;
+  --textFont:  'Merriweather', serif;
+}
+body{
+  min-height: 100%;
+  font-family: var(--textFont);
+  font-size: 1.6rem;
+}
+/*LOGIN*/
+.cotainer-login{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--gris1);
+}
+.cotainer-login .card{
+  width: 30%;
+}
+/*-------*/
+form .form-row .form-group label{
+  font-size: 1rem;
+}
+form .form-row .form-group label span{
+  vertical-align: super;
+  margin-left: 10px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.card-header{
+  text-align: center;
+  background: var(--gris2);
+  color: white;          
 }
+aside{
+  background-color: var(--blanco);
+  flex: 0 0 300px;
+  padding: 3rem;
+}
+aside h2{
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 80px;
+}
+aside h2 span{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  color: var(--gris2);
+}
+.sombra {
+  -webkit-box-shadow: 0px 4px 10px -3px rgba(117,117,117,1);
+  -moz-box-shadow: 0px 4px 10px -3px rgba(117,117,117,1);
+  box-shadow: 0px 4px 10px -3px rgba(117,117,117,1);
+}
+.sombra-dark {
+  -webkit-box-shadow: 0px 6px 11px -8px rgba(0,0,0,0.9);
+  -moz-box-shadow: 0px 6px 11px -8px rgba(0,0,0,0.9);
+  box-shadow: 0px 6px 11px -8px rgba(0,0,0,0.9);
+}
+.error{
+  font-size: 1rem;
+  margin: 0;
+  padding: 5px;
+  background: rgb(236, 115, 115);
+  color:var(--blanco);
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
+}
+.container-main{
+  flex: 1;
+  background-color: var(--gris1);
+}
+/*HOME*/
+.container-home{
+  display: flex;
+  min-height: 100vh;
+}
+/*-----*/
+
+ul{
+  list-style: none;
+  padding: 0;
+  
+}
+ul .option-menu{
+  color: #000000;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+ul .option-menu i{
+  vertical-align: sub;
+  padding: 15px 0;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--gris2);
+  padding: 1rem;
+}
+.app-header p{
+  margin: 0;
+  color: white;
+  
+}
+
