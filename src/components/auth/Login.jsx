@@ -35,17 +35,17 @@ const Login = (props) => {
                 <div className="card-header">Login</div>
                 <div className="card-body">
                 <form onSubmit={onSubmit}>
-                    <div class="form-row">
-                        <div class="form-group col-12">
-                            <label htmlFor="user"><i class="material-icons">account_circle</i> <span>Usuario:</span></label>
-                            <input type="text" id="user" name="user" value={datos.user} class="form-control" onChange={onChange}/>
+                    <div className="form-row">
+                        <div className="form-group col-12">
+                            <label htmlFor="user"><i className="material-icons">account_circle</i> <span>Usuario:</span></label>
+                            <input type="text" id="user" name="user" value={datos.user} className="form-control" onChange={onChange}/>
                         </div>
-                        <div class="form-group col-12">
-                            <label htmlFor="pass"><i class="material-icons">account_circle</i><span>Contraseña:</span></label>
-                            <input type="password" id="pass" name="pass" value={datos.pass} class="form-control" onChange={onChange}/>
+                        <div className="form-group col-12">
+                            <label htmlFor="pass"><i className="material-icons">account_circle</i><span>Contraseña:</span></label>
+                            <input type="password" id="pass" name="pass" value={datos.pass} className="form-control" onChange={onChange}/>
                         </div>
                         {error
-                            ?<Error mensajeError="Usuario o Contraseña incorrectos"/>
+                            ?<Error mensajeError="Usuario o Contraseña incorrectos" tipo="alert alert-danger"/>
                             :null
                         }
                     </div>
