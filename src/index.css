@@ -109,4 +109,19 @@ ul .option-menu i{
   color: white;
   
 }
+/*EQUIPOS*/
+.container-equipos{
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  column-gap: 15px;
+  margin: 20px 0;
+}
+.card-header h3{
+  font-size: 1.1rem;
+  margin: 0;
+}
+.card-body p{
+  font-size: .9rem;
+}
+/*----*/
 
