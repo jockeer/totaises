@@ -1,6 +1,6 @@
 :root {
   --blanco: #ffffff;
-  --gris1: #f5ffee;
+  --gris1: #f1f1f1;
   --gris2: #31482f;
   --gris3: #1c2d1a;
   --negro: #000000;
@@ -129,4 +129,48 @@ h4{
   margin: 0;
 }
 /*-----*/
+.container-jugadores{
+  display: grid;
+  row-gap: 15px;
+}
+.jugador{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  border-radius: 5px;
+  padding: 5px;
+}
+.jugador-header{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
 
+} 
+.jugador  p{
+  margin: 0;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.tituloSeccion{
+  margin: 20px 0;
+}
+.equipo{
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  background-color: white;
+  padding: 10px;
+  /* border: 1px solid black; */
+  
+}
+.equipo:hover{
+  background-color: #e8ffe8;
+  
+  /* border: 1px solid black; */
+  
+}
+.equipo.head{
+  background: var(--gris2);
+  color: white;
+}
+.equipo h4{
+  text-align: center;
+  /* border: 1px solid black; */
+}
