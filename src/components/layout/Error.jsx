@@ -1,7 +1,9 @@
 import React from 'react';
-const Error = ({mensajeError}) => {
+const Error = ({mensajeError,tipo}) => {
     return ( 
-        <p className="error">{mensajeError}</p>
+        <div className={tipo} role="alert">
+            {mensajeError}
+        </div>
      );
 }
  
