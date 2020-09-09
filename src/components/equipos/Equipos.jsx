@@ -4,7 +4,6 @@ import Barra from '../layout/Barra'
 import Equipo from './Equipo'
 import Error from '../layout/Error'
 
-import Equipo from './Equipo'
 
 const Equipos = () => {
 

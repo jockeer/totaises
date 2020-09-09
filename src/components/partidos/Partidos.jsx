@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import Sidebar from '../layout/Sidebar'
 import Barra from '../layout/Barra'
+import Partido from './Partido'
 
 const Partidos = () => {
 
@@ -65,6 +66,11 @@ const Partidos = () => {
                     </form>
                     <hr/>
                     <h3>Lista de Partidos</h3>
+                    <div className="container-partidos">
+                        {partidos.map(partido =>{
+                            return <Partido key={partido.id} partido={partido}/>
+                        })}
+                    </div>
                 </div>
             </div>
         </div>

@@ -122,6 +122,7 @@ ul .option-menu i{
 }
 .card-body p{
   font-size: .9rem;
+  text-align: center;
 }
 /*----*/
 
@@ -188,4 +189,43 @@ h4{
 .equipo h4{
   text-align: center;
   /* border: 1px solid black; */
+}
+.container-partidos{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  row-gap: 15px;
+  column-gap: 15px;
+}
+.card-body.infoPartido{
+  display: grid;
+  grid-template-columns: 45% 10% 45%;
+  row-gap: 15px;
+}
+.card-body.infoPartido p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.container-dpartido{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+.local,.visitante{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.local,.visitante h2{
+  /* display: flex;
+  justify-content: space-around; */
+}
+.container-dpartido h2{
+  text-align: center;
+  
+}
+.container-botones{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }

@@ -7,6 +7,7 @@ import Equipos from './components/equipos/Equipos';
 import DetalleEquipo from './components/equipos/DetalleEquipo'
 import Campeonato from './components/campeonatos/Campeonato';
 import Partidos from './components/partidos/Partidos';
+import DetallePartido from './components/partidos/DetallePartido';
 
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
@@ -22,6 +23,7 @@ function App() {
         <Route exact path="/campeonatos" component={Campeonato}/>
         <Route exact path="/partidos" component={Partidos}/>
         <Route exact path="/detalle-equipo/:idequipo" component={DetalleEquipo}/>
+        <Route exact path="/detalle-partido/:idpartido" component={DetallePartido}/>
 
       </Switch>
     </Router>
