@@ -9,9 +9,9 @@ const Partido = ({partido}) => {
                 <h3>Partido-Totaises</h3>
             </div>
             <div className="card-body infoPartido">
-                <p>Local</p>
+                <p>Local <span><img width="40px" src={`http://localhost:4000/img/${partido.escudoLocal}.png`} alt=""/></span></p>
                 <p>vs</p>
-                <p>Visitante</p>
+                <p>Visitante <span><img width="40px" src={`http://localhost:4000/img/${partido.escudoVisitante}.png`} alt=""/></span></p>
                 <p>{partido.Equipo_Local}</p>
                 <p>vs</p>
                 <p>{partido.Equipo_Visitante}</p>

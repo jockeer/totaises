@@ -16,12 +16,13 @@ const DetallePartido = ({match}) => {
         const cargarPartido = async () => {
             const API = await fetch(`http://localhost:4000/api/traerdetallePartido/${match.params.idpartido}`)
             const respuesta = await API.json()
+            console.log(respuesta[0])
             guardarPartido(respuesta[0])
         }
         cargarPartido()
     }, [])
 
-    const {id,fecha,goles_local,estado,goles_visitante,Equipo_Local,Equipo_Visitante,Arbitro,Estadio,Campeonato}=partido
+    const {id,fecha,goles_local,estado,goles_visitante,Equipo_Local,escudoLocal,Equipo_Visitante,escudoVisitante,Arbitro,Estadio,Campeonato}=partido
 
     const onClick = ()=>{
         guardarForm(true)
@@ -67,23 +68,23 @@ const DetallePartido = ({match}) => {
                 <hr/>
                 {Object.keys(partido).length === 0
                     ?null
-                    :<p><h4>Fecha: {fecha.substr(0,10)}</h4> </p>
+                    :<h4><p>Fecha: {fecha.substr(0,10)} </p></h4>
                 }
-                <p><h4>Arbitro: {Arbitro}</h4></p>
-                <p><h4>Estadio: {Estadio}</h4></p>
-                <p><h4>Campeonato: {Campeonato}</h4></p>
+                <h4><p>Arbitro: {Arbitro}</p></h4>
+                <h4><p>Estadio: {Estadio}</p></h4>
+                <h4><p>Campeonato: {Campeonato}</p></h4>
                 <div className="container-dpartido">
                     <h2>Local</h2>
                     <h2></h2>
                     <h2>Visitante</h2>
                     <div className="local">
-                        <p><h2> {Equipo_Local}</h2></p>
-                        <p><h2>  </h2></p>
+                        <h2><p>{Equipo_Local}</p> <span><img width="50px" src={`http://localhost:4000/img/${escudoLocal}.png`} alt=""/></span> </h2>
+                        <h2> <p>  </p></h2>
                     </div>
                     <h2>{goles_local} - {goles_visitante}</h2>
                     <div className="visitante">
-                        <p><h2>   </h2></p>
-                        <p><h2> {Equipo_Visitante} </h2></p>
+                        <h2><p></p>   </h2>
+                        <h2><p>{Equipo_Visitante}</p><span><img width="50px" src={`http://localhost:4000/img/${escudoVisitante}.png`} alt=""/></span>  </h2>
                     </div>
                     <h2></h2>
                     {form

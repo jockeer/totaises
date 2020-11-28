@@ -35,6 +35,7 @@ const Partidos = () => {
 
         const API = await fetch(`http://localhost:4000/api/traerPartidosPorCampeonato/${parseInt(id_campeonato)}/${fecha}`)
         const respuesta = await API.json()
+        console.log(respuesta)
         guardarPartidos(respuesta)
     }
 

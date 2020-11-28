@@ -24,8 +24,9 @@ const Equipos = () => {
         guardarEstadoForm(true);
 
         const API = await fetch(`http://localhost:4000/api/traerEquipos/${parseInt(categoria)}`);
-        const repuesta = await API.json();
-        guardarEquipos(repuesta);
+        const respuesta = await API.json();
+        console.log(respuesta)
+        guardarEquipos(respuesta);
         
     }
     const onChange = e => {
