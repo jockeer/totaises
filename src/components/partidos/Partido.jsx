@@ -24,6 +24,10 @@ const Partido = ({partido}) => {
                 <p>Arbitro</p>
                 <p>-</p>
                 <p>{partido.Arbitro}</p>
+                {partido.estado==='jugado'
+                    ?<p className='patido-jugado' >{partido.estado}</p>
+                    :<p className='patido-nojugado' >{partido.estado}</p>
+                }
             </div>
             <div className="card-footer">
                 <Link to={`/detalle-partido/${partido.id}`} className="btn btn-info">ver Partido</Link>

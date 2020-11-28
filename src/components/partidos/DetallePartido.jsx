@@ -1,5 +1,6 @@
 import React,{useState,useEffect,Fragment} from 'react'
 import Barra from '../layout/Barra'
+import Error from '../layout/Error'
 
 const DetallePartido = ({match}) => {
 
@@ -20,7 +21,7 @@ const DetallePartido = ({match}) => {
         cargarPartido()
     }, [])
 
-    const {id,fecha,goles_local,goles_visitante,Equipo_Local,Equipo_Visitante,Arbitro,Estadio,Campeonato}=partido
+    const {id,fecha,goles_local,estado,goles_visitante,Equipo_Local,Equipo_Visitante,Arbitro,Estadio,Campeonato}=partido
 
     const onClick = ()=>{
         guardarForm(true)
@@ -102,15 +103,14 @@ const DetallePartido = ({match}) => {
                             <button type="button" onClick={onClickCancel} className="btn btn-danger">cancelar</button>
                             </div>
                         </form>
-                        : <button className="btn btn-info" onClick={onClick} >Editar Partido</button> 
+                        : estado==='jugado' 
+                            ? <Error mensajeError='Partido Jugado' tipo='alert alert-danger'/>
+                            :<button className="btn btn-info" onClick={onClick} >Editar Partido</button> 
+                        
                     }
                         
                     <h2></h2>
                 </div>
-                {/* <div className="container-botones">
-                            <button className="btn btn-info">Editar Partido</button> 
-                            <button className="btn btn-danger">Editar Partido</button>
-                        </div> */}
             </div>
         </Fragment>
      );

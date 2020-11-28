@@ -170,7 +170,7 @@ h4{
 }
 .equipo{
   display: grid;
-  grid-template-columns: repeat(5,1fr);
+  grid-template-columns: repeat(6,1fr);
   background-color: white;
   padding: 10px;
   /* border: 1px solid black; */
@@ -228,4 +228,14 @@ h4{
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+.patido-jugado{
+  background: green;
+  color: white;
+  border-radius: 5px;
+}
+.patido-nojugado{
+  background: red;
+  color: white;
+  border-radius: 5px;
 }

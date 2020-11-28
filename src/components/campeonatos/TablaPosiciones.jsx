@@ -61,6 +61,7 @@ const TablaPosiciones = () => {
                 <div className="equipo head">
                     <h4>Equipo</h4>
                     <h4>P/J</h4>
+                    <h4>P/G</h4>
                     <h4>P/P</h4>
                     <h4>P/E</h4>
                     <h4>Puntos</h4>
