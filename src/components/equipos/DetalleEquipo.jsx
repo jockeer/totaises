@@ -36,7 +36,7 @@ const DetalleEquipo = ({match}) => {
         <Fragment>
             <Barra titulo="Detalle del Equipo"/>
             <div className="container">
-                <h2><Link className="option-menu" to='/home'><i className="material-icons">arrow_back</i></Link> Detalle del club - {nombre}</h2>
+                <h2><Link className="option-menu" to='/equipos'><i className="material-icons">arrow_back</i></Link> Detalle del club - {nombre}</h2>
                 <h2>Lista de jugadores</h2>
                 <div className="container-jugadores">
                 <div className="jugador">
